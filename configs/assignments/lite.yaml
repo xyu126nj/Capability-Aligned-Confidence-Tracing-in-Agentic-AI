@@ -1,0 +1,15 @@
+import: definition.yaml
+
+concurrency:
+  task:
+    os-std: 5
+  agent:
+    gpt-4o-mini: 5
+
+assignments: # List[Assignment] | Assignment
+  - agent: # "task": List[str] | str ,  "agent": List[str] | str
+      - gpt-4o-mini
+    task:
+      - os-std
+
+output: "outputs/{TIMESTAMP}"
